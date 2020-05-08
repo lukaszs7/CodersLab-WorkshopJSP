@@ -21,27 +21,19 @@
 <body style="margin: 30px 30px 30px 30px">
 
 <%@include file="../fragments/header.jsp" %>
-<h1>Last submissions</h1>
+<h1>Available groups</h1>
 <table>
     <tr>
-        <th>Exercise name</th>
-        <th>Solution author</th>
-        <th>Date</th>
+        <th>Group name</th>
         <th>Actions</th>
     </tr>
-    <c:forEach items="${solutions}" var="solution">
+    <c:forEach items="${groups}" var="group">
         <tr>
             <td>
-                <c:out value="${solution.exercise.title}" />
+                <c:out value="${group.name}"/>
             </td>
             <td>
-                <c:out value="${solution.author.username}" />
-            </td>
-            <td>
-                <c:out value="${solution.createdAt}" />
-            </td>
-            <td>
-                <a href="/solutions/${solution.id}">Details</a>
+                <a href="/groups/${group.id}">Details</a>
             </td>
         </tr>
     </c:forEach>

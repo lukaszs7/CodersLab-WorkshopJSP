@@ -3,13 +3,24 @@ package com.szmolke.coderslab.submissions.model;
 import java.util.List;
 
 public class UsersGroup {
-    private Long id;
+    private int id;
     private String name;
     private List<User> users;
 
     public UsersGroup(String name, List<User> users) {
         this.name = name;
         this.users = users;
+    }
+
+    public UsersGroup() {
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
